@@ -13,5 +13,6 @@ class UserReigsterTestCase(APITestCase):
             "password":"password",
         }
         response = self.client.post(url, user_data)
-        self.assertEqual(response,response)
+        take_response = {"message": "가입 완료!!"}
+        self.assertEqual(response.data,take_response)
         
